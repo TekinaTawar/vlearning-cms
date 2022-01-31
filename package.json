@@ -2,7 +2,7 @@
   "name": "vlearning-cms",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "CMS for vlearning next website to mannage couse data",
   "scripts": {
     "dev": "strapi develop",
     "start": "strapi start",
@@ -10,13 +10,12 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.0.5",
-    "@strapi/plugin-users-permissions": "4.0.5",
+    "@strapi/plugin-i18n": "^4.0.6",
+    "@strapi/plugin-users-permissions": "^4.0.6",
     "@strapi/provider-upload-cloudinary": "^4.0.6",
-    "@strapi/strapi": "4.0.5",
+    "@strapi/strapi": "^4.0.6",
     "pg": "^8.7.1",
-    "pg-connection-string": "^2.5.0",
-    "sqlite3": "5.0.2"
+    "pg-connection-string": "^2.5.0"
   },
   "author": {
     "name": "A Strapi developer"
@@ -28,5 +27,8 @@
     "node": ">=12.x.x <=16.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "sqlite3": "^5.0.2"
+  }
 }
