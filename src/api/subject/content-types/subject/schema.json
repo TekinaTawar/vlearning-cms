@@ -4,7 +4,8 @@
   "info": {
     "singularName": "subject",
     "pluralName": "subjects",
-    "displayName": "subject"
+    "displayName": "course",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,11 +17,30 @@
       "required": true,
       "unique": true
     },
-    "video_lecture": {
+    "exam": {
       "type": "relation",
       "relation": "oneToOne",
+      "target": "api::exam.exam"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "video_lectures": {
+      "type": "relation",
+      "relation": "oneToMany",
       "target": "api::video-lecture.video-lecture",
-      "inversedBy": "subject"
+      "mappedBy": "course"
+    },
+    "combo": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::combo.combo",
+      "inversedBy": "courses"
     }
   }
 }

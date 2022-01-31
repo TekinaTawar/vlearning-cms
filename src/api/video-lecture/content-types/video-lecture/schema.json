@@ -4,18 +4,22 @@
   "info": {
     "singularName": "video-lecture",
     "pluralName": "video-lectures",
-    "displayName": "videoLecture"
+    "displayName": "videoLecture",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "subject": {
+    "video_name": {
+      "type": "string"
+    },
+    "course": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::subject.subject",
-      "inversedBy": "video_lecture"
+      "inversedBy": "video_lectures"
     }
   }
 }
