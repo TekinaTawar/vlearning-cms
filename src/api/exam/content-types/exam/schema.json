@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exams",
+  "info": {
+    "singularName": "exam",
+    "pluralName": "exams",
+    "displayName": "exam"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "examName": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 30
+    }
+  }
+}

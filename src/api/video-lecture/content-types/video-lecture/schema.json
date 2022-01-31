@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_lectures",
+  "info": {
+    "singularName": "video-lecture",
+    "pluralName": "video-lectures",
+    "displayName": "videoLecture"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject.subject",
+      "inversedBy": "video_lecture"
+    }
+  }
+}
