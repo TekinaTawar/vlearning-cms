@@ -16,6 +16,12 @@
       "required": true,
       "unique": true,
       "maxLength": 30
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subject.subject",
+      "mappedBy": "exam"
     }
   }
 }

@@ -12,8 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "combo_id": {
-      "type": "uid"
+    "comboId": {
+      "type": "uid",
+      "required": true
     },
     "courses": {
       "type": "relation",
@@ -21,7 +22,7 @@
       "target": "api::subject.subject",
       "mappedBy": "combo"
     },
-    "combo_price": {
+    "comboPrice": {
       "type": "integer"
     }
   }

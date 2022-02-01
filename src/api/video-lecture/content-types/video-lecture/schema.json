@@ -12,14 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "video_name": {
+    "videoName": {
       "type": "string"
     },
     "course": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::subject.subject",
-      "inversedBy": "video_lectures"
+      "inversedBy": "videoLecture"
     }
   }
 }
