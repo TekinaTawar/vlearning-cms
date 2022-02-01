@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "comboId": {
-      "type": "uid",
-      "required": true
-    },
     "courses": {
       "type": "relation",
       "relation": "oneToMany",
@@ -23,7 +19,13 @@
       "mappedBy": "combo"
     },
     "comboPrice": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
+    },
+    "comboName": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

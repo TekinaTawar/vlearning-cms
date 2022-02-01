@@ -23,13 +23,11 @@
       "target": "api::exam.exam",
       "inversedBy": "courses"
     },
-    "price": {
-      "type": "integer"
-    },
     "teacher": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::teacher.teacher"
+      "relation": "manyToOne",
+      "target": "api::teacher.teacher",
+      "inversedBy": "courses"
     },
     "videoLecture": {
       "type": "relation",

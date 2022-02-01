@@ -23,6 +23,12 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subject.subject",
+      "mappedBy": "teacher"
     }
   }
 }
