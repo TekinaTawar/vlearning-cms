@@ -68,6 +68,14 @@
       "relation": "oneToOne",
       "target": "api::order.order",
       "mappedBy": "users_permissions_user"
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
     }
   }
 }
