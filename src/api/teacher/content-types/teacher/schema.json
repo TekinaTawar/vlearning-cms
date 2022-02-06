@@ -4,7 +4,8 @@
   "info": {
     "singularName": "teacher",
     "pluralName": "teachers",
-    "displayName": "teacher"
+    "displayName": "teacher",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,16 +19,17 @@
       "minLength": 3
     },
     "teacherImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "courses": {
+    "videoLecture": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::subject.subject",
+      "target": "api::video-lecture.video-lecture",
       "mappedBy": "teacher"
     }
   }

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "subject",
     "pluralName": "subjects",
-    "displayName": "course",
+    "displayName": "subject",
     "description": ""
   },
   "options": {
@@ -23,23 +23,11 @@
       "target": "api::exam.exam",
       "inversedBy": "courses"
     },
-    "teacher": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::teacher.teacher",
-      "inversedBy": "courses"
-    },
     "videoLecture": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::video-lecture.video-lecture",
-      "mappedBy": "course"
-    },
-    "combo": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::combo.combo",
-      "inversedBy": "courses"
+      "mappedBy": "subject"
     }
   }
 }

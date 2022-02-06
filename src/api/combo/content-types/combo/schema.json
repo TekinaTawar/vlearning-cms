@@ -12,20 +12,15 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "courses": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::subject.subject",
-      "mappedBy": "combo"
-    },
-    "comboPrice": {
-      "type": "integer",
-      "required": true
-    },
     "comboName": {
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "videoLecture": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::video-lecture.video-lecture"
     }
   }
 }

@@ -12,14 +12,43 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "videoName": {
-      "type": "string"
-    },
-    "course": {
+    "subject": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::subject.subject",
       "inversedBy": "videoLecture"
+    },
+    "batch": {
+      "type": "enumeration",
+      "enum": [
+        "Regular",
+        "FastTrack"
+      ]
+    },
+    "teacher": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::teacher.teacher",
+      "inversedBy": "videoLecture"
+    },
+    "startDate": {
+      "type": "date",
+      "default": "2020-10-31T18:30:00.000Z",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "default": "2021-01-31T18:30:00.000Z",
+      "required": true
+    },
+    "hours": {
+      "type": "integer"
+    },
+    "Name": {
+      "type": "string",
+      "private": true,
+      "required": true,
+      "unique": true
     }
   }
 }

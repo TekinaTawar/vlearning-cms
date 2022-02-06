@@ -13,37 +13,32 @@
   "pluginOptions": {},
   "attributes": {
     "view": {
-      "type": "integer",
+      "type": "decimal",
       "required": true,
-      "default": 1
-    },
-    "validity": {
-      "type": "date",
-      "required": true
+      "default": 1.5
     },
     "combo": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::combo.combo"
     },
-    "course": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::subject.subject"
-    },
     "format": {
       "type": "enumeration",
       "enum": [
         "USB",
         "Download"
-      ]
+      ],
+      "default": "Download",
+      "required": true
     },
     "studyMaterial": {
       "type": "enumeration",
       "enum": [
         "Book",
         "Softcopy"
-      ]
+      ],
+      "default": "Book",
+      "required": true
     },
     "price": {
       "type": "integer",
@@ -51,7 +46,19 @@
     },
     "isCombo": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
+    },
+    "videoLecture": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::video-lecture.video-lecture"
+    },
+    "validity": {
+      "type": "integer",
+      "default": 12,
+      "required": true,
+      "min": 1
     }
   }
 }
