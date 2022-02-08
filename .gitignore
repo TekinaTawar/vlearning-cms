@@ -118,3 +118,6 @@ build
 # Added by dev
 ############################
 yarn.lock
+
+# added by me
+mydb.dump
